@@ -2,6 +2,24 @@
 /* Look over this data, then proceed to line 91*/
 const data = [
   {
+    title: 'my 2nd article',
+    date: '1/22/20',
+    firstParagraph: `4th`,
+
+    secondParagraph: `5th`,
+
+    thirdParagraph: `6th`
+  },
+  {
+    title: 'My new article',
+    date: '1/22/20',
+    firstParagraph: `first`,
+
+    secondParagraph: `second`,
+
+    thirdParagraph: `third`
+  },
+  {
     title: 'Lambda School Students: "We\'re the best!"',
     date: 'Nov 5th, 2018',
     firstParagraph: `Lucas ipsum dolor sit amet ben twi'lek padmé darth darth darth moff hutt organa twi'lek. Ben amidala secura skywalker lando
@@ -109,8 +127,11 @@ const data = [
     const p = document.createElement('p')
     p.textContent = date
     const firstP = document.createElement('p')
+    firstP.textContent = firstParagraph
     const secondP = document.createElement('p')
+    secondP.textContent = secondParagraph
     const thirdP = document.createElement('p')
+    thirdP.textContent = thirdParagraph
     const expandButton = document.createElement('span')
     expandButton.textContent = "OPEN / CLOSE"
 
