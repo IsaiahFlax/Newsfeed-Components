@@ -21,40 +21,38 @@ function createMenuComponent(anyArray){
   for (let i = 0; i < menuItems.length; i++){
    let temp = document.createElement('li')
     temp.textContent = menuItems[i]
-    temp.classList.add('li')
+    //temp.classList.add('li')
     ul.append(temp)
   }
   menu.append(ul)
   menu.classList.add('menu')
-  ul.classList.add('ul')
+  console.log(ul)
+ // ul.classList.add('ul')
   
 
   const menuButton = document.querySelector('.menu-button')
   menuButton.classList.add('menu-button')
  
   
-  // menuButton.addEventListener('click', event => {
-  //   console.log("click", menu.classList)
-  //       if (menu.classList) { 
-  //         menu.classList.toggle("menu--open");
-  //   } else {
-  //     var classes = menu.className.split(" ");
-  //     var i = classes.indexOf("menu--open");
+  menuButton.addEventListener('click', event => {
+    console.log("click", menu.classList)
   
-  //     if (i >= 0) 
-  //       classes.splice(i, 1);
-  //     else 
-  //       classes.push("menu--open");
-  //       menu.className = classes.join(" "); 
-  //   }
-  // }) 
+          menu.classList.toggle("menu--open")
+          console.log("classlist", menu.classList)
+    
+  }) 
 
+  console.log("menu", menu)
   return menu
 }
+console.log("hi", createMenuComponent(menuItems))
+
+const newMenu =  createMenuComponent(menuItems)
 const header = document.querySelector('.header')
-menuItems.map(items => {
-  header.append(createMenuComponent(menuItems))})
-console.log(header)
+console.log("header", header)
+
+header.prepend(newMenu)
+console.log("newMenu", newMenu)
 
   // The function takes an array as its only argument.
 
